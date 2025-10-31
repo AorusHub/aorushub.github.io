@@ -8,7 +8,7 @@ image:
   alt: Strategy Testing Thumbnail
 ---
 
-# Rangkuman Materi: Testing Strategi
+# Testing Strategi
 ---
 
 ## 1. Pengertian Testing
