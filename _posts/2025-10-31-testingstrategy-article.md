@@ -1,5 +1,5 @@
 ---
-title: Strategi Testing
+title: 1. Strategi Testing
 date: 2025-10-31
 categories: [Artikel, Software Testing and Quality Assurance]
 tags: [Artikel]
@@ -8,191 +8,97 @@ image:
   alt: Strategy Testing Thumbnail
 ---
 
-##  1. Pengertian Testing
+# Rangkuman Materi: Testing Strategi
+---
 
-Testing adalah proses **mengevaluasi perangkat lunak** untuk mendeteksi
-kesalahan (bug) dan memastikan sistem berfungsi sesuai **kebutuhan
-fungsional maupun non-fungsional**.\
-Tujuan utama testing yaitu memastikan **kualitas software**, **keamanan
-sistem**, **pengalaman pengguna yang baik**, dan **efisiensi biaya
-pengembangan**.
+## 1. Pengertian Testing
+Testing adalah proses **mengevaluasi perangkat lunak** untuk mendeteksi kesalahan (*bug*) dan memastikan sistem berfungsi sesuai **kebutuhan fungsional maupun non-fungsional**.  
+Tujuan utama testing adalah untuk menjamin **kualitas software**, **keamanan sistem**, **pengalaman pengguna yang baik**, serta **efisiensi biaya pengembangan**.
 
-  -----------------------------------------------------------------------
-  Aspek                    Penjelasan
-  ------------------------ ----------------------------------------------
-  **Tujuan Testing**       Menemukan bug dan memastikan sistem bekerja
-                           sesuai kebutuhan
+| **Aspek**             | **Penjelasan**                                                                 |
+|------------------------|--------------------------------------------------------------------------------|
+| **Tujuan Testing**     | Menemukan bug dan memastikan sistem bekerja sesuai kebutuhan.                  |
+| **Manfaat**            | Mengurangi risiko kegagalan, meningkatkan kepercayaan stakeholder, efisiensi biaya. |
+| **Hasil Akhir**        | Software berkualitas tinggi, aman, stabil, dan memenuhi kebutuhan pengguna.    |
 
-  **Manfaat**              Mengurangi risiko kegagalan, meningkatkan
-                           kepercayaan stakeholder, efisiensi biaya
-
-  **Hasil Akhir**          Software berkualitas tinggi, aman, stabil, dan
-                           memenuhi kebutuhan pengguna
-  -----------------------------------------------------------------------
-
-------------------------------------------------------------------------
+---
 
 ## 2. Software Testing Life Cycle (STLC)
+STLC adalah **proses sistematis** yang terdiri dari tahapan berurutan untuk menjamin kualitas perangkat lunak.
 
-STLC adalah **proses sistematis** yang terdiri dari tahapan berurutan
-untuk menjamin kualitas perangkat lunak.
+| **Tahap**                       | **Deskripsi**                                                                  | **Hasil Utama**                            |
+|---------------------------------|--------------------------------------------------------------------------------|--------------------------------------------|
+| **1. Test Planning**            | Menentukan strategi, waktu, biaya, lingkungan, dan peran pengujian.            | Dokumen rencana pengujian.                |
+| **2. Test Design**              | Membuat *test case*, data uji, dan skenario pengujian.                         | Daftar test case & RTM (*Requirement Traceability Matrix*). |
+| **3. Test Execution**           | Menjalankan pengujian (unit, integrasi, sistem, acceptance).                   | Hasil pelaksanaan uji.                    |
+| **4. Test Reporting & Analysis**| Menganalisis hasil, mencatat bug, dan memberi rekomendasi perbaikan.           | Laporan hasil uji dan rekomendasi.        |
 
-  ------------------------------------------------------------------------
-  Tahap            Deskripsi                 Hasil Utama
-  ---------------- ------------------------- -----------------------------
-  **1. Test        Menentukan strategi,      Dokumen rencana pengujian
-  Planning**       waktu, biaya, lingkungan, 
-                   dan peran pengujian.      
-
-  **2. Test        Membuat test case, data   Daftar test case dan RTM
-  Design**         uji, dan skenario         (Requirement Traceability
-                   pengujian.                Matrix)
-
-  **3. Test        Menjalankan pengujian     Hasil pelaksanaan uji
-  Execution**      (unit, integrasi, sistem, 
-                   acceptance).              
-
-  **4. Test        Menganalisis hasil,       Laporan hasil uji dan
-  Reporting &      mencatat bug, dan memberi perbaikan
-  Analysis**       rekomendasi.              
-  ------------------------------------------------------------------------
-
-------------------------------------------------------------------------
+---
 
 ## 3. Jenis Pengujian Berdasarkan Abstraksi
 
-  ------------------------------------------------------------------------
-  Jenis Testing                      Tujuan            Contoh
-  ---------------------------------- ----------------- -------------------
-  **Unit Testing**                   Menguji fungsi    Menguji fungsi
-                                     atau metode       perhitungan diskon.
-                                     tunggal agar      
-                                     hasilnya akurat.  
+| **Jenis Testing**     | **Tujuan**                                                | **Contoh**                                      |
+|------------------------|-----------------------------------------------------------|-------------------------------------------------|
+| **Unit Testing**       | Menguji fungsi/metode tunggal agar hasilnya akurat.      | Menguji fungsi perhitungan diskon.              |
+| **Integration Testing**| Memastikan interaksi antar modul berjalan baik.          | Modul login terhubung dengan modul profil.      |
+| **System Testing**     | Menguji sistem secara keseluruhan terhadap spesifikasi.  | Aplikasi e-commerce untuk 1000 pengguna.        |
+| **Acceptance Testing** | Validasi akhir oleh pengguna/klien sebelum rilis.        | Klien menyetujui aplikasi sebelum diluncurkan.  |
 
-  **Integration Testing**            Memastikan        Modul login dan
-                                     interaksi antar   profil saling
-                                     modul berjalan    terhubung.
-                                     baik.             
-
-  **System Testing**                 Menguji sistem    Aplikasi e-commerce
-                                     secara            dapat menangani
-                                     keseluruhan       1000 pengguna.
-                                     terhadap          
-                                     spesifikasi.      
-
-  **Acceptance Testing**             Validasi akhir    Klien menyetujui
-                                     oleh              aplikasi sebelum
-                                     pengguna/klien    diluncurkan.
-                                     sebelum rilis.    
-  ------------------------------------------------------------------------
-
-------------------------------------------------------------------------
+---
 
 ## 4. Jenis Pengujian Berdasarkan Fungsi
 
-  --------------------------------------------------------------------------
-  Jenis              Fokus             Contoh              Tujuan
-  ------------------ ----------------- ------------------- -----------------
-  **Fungsional       Menguji fungsi    Login, reset        Menjamin fungsi
-  Testing**          utama sistem      password,           berjalan dengan
-                     sesuai kebutuhan. pembayaran online.  benar.
+| **Jenis**               | **Fokus**                                      | **Contoh**                                   | **Tujuan**                               |
+|--------------------------|------------------------------------------------|-----------------------------------------------|-------------------------------------------|
+| **Fungsional Testing**   | Menguji fungsi utama sistem sesuai kebutuhan. | Login, reset password, pembayaran online.     | Menjamin fungsi berjalan dengan benar.    |
+| **Non-Fungsional Testing**| Menguji performa, keamanan, dan reliabilitas. | Uji performa saat flash sale, uji respon sistem. | Menilai kualitas dan ketahanan sistem.   |
 
-  **Non-Fungsional   Menguji performa, Uji performa saat   Menilai kualitas
-  Testing**          keamanan, dan     flash sale, uji     dan ketahanan
-                     reliabilitas.     respon sistem.      sistem.
-  --------------------------------------------------------------------------
-
-------------------------------------------------------------------------
+---
 
 ## 5. Jenis Pengujian Berdasarkan Domain
 
-  ------------------------------------------------------------------------
-  Jenis Testing               Fokus          Contoh          Tujuan
-  --------------------------- -------------- --------------- -------------
-  **Performance Testing**     Kinerja &      Menguji website Menjamin
-                              stabilitas     saat traffic    sistem tetap
-                              sistem di      tinggi.         cepat &
-                              bawah beban                    stabil.
-                              tinggi.                        
+| **Jenis Testing**      | **Fokus**                              | **Contoh**                                      | **Tujuan**                                      |
+|-------------------------|-----------------------------------------|-------------------------------------------------|-------------------------------------------------|
+| **Performance Testing** | Kinerja & stabilitas sistem di beban tinggi. | Menguji website saat traffic tinggi.            | Menjamin sistem tetap cepat & stabil.           |
+| **Security Testing**    | Identifikasi celah keamanan.           | Uji serangan SQL injection, XSS.                | Melindungi data pengguna dan sistem.            |
+| **Usability Testing**   | Kemudahan penggunaan bagi user.        | Evaluasi kemudahan navigasi & ikon.             | Memastikan aplikasi ramah dan mudah digunakan.  |
 
-  **Security Testing**        Identifikasi   Uji serangan    Melindungi
-                              celah          SQL injection,  data pengguna
-                              keamanan.      XSS.            dan sistem.
-
-  **Usability Testing**       Kemudahan      Evaluasi        Memastikan
-                              penggunaan     kemudahan       aplikasi
-                              bagi user.     navigasi dan    ramah
-                                             ikon.           pengguna.
-  ------------------------------------------------------------------------
-
-------------------------------------------------------------------------
+---
 
 ## 6. Jenis Pengujian Berdasarkan Struktur
 
-  -------------------------------------------------------------------------
-  Jenis Testing         Penjelasan        Kelebihan       Kekurangan
-  --------------------- ----------------- --------------- -----------------
-  **Black-Box Testing** Penguji tidak     Mudah           Tidak mendeteksi
-                        tahu struktur     dilakukan,      bug dalam logika
-                        kode, hanya       sesuai sudut    internal.
-                        menguji           pandang user.   
-                        input--output.                    
+| **Jenis Testing**     | **Penjelasan**                                                  | **Kelebihan**                                         | **Kekurangan**                                       |
+|------------------------|----------------------------------------------------------------|--------------------------------------------------------|------------------------------------------------------|
+| **Black-Box Testing**  | Penguji tidak tahu struktur kode, hanya menguji input–output. | Mudah dilakukan, sesuai sudut pandang user.            | Tidak mendeteksi bug dalam logika internal.          |
+| **White-Box Testing**  | Penguji memahami struktur & logika kode program.              | Dapat menemukan bug tersembunyi dan meningkatkan kualitas kode. | Membutuhkan waktu & keahlian teknis tinggi.         |
 
-  **White-Box Testing** Penguji memahami  Dapat menemukan Membutuhkan waktu
-                        struktur dan      bug tersembunyi dan pengetahuan
-                        logika kode.      & meningkatkan  teknis tinggi.
-                                          kualitas kode.  
-  -------------------------------------------------------------------------
-
-------------------------------------------------------------------------
+---
 
 ## 7. Pelaporan & Analisis Testing
+Setelah pengujian selesai, hasil dianalisis untuk mengukur kualitas dan menentukan langkah perbaikan.
 
-Setelah pengujian, hasil perlu dianalisis secara menyeluruh untuk
-mengukur kualitas dan menentukan langkah perbaikan.
+| **Komponen**         | **Isi Pelaporan**                                                                 |
+|-----------------------|-----------------------------------------------------------------------------------|
+| **Ringkasan Hasil**   | Jumlah test case yang berhasil, gagal, dan belum dijalankan.                     |
+| **Evaluasi Kualitas** | Apakah sistem memenuhi spesifikasi fungsional dan non-fungsional.                |
+| **Identifikasi Bug**  | Jenis kesalahan, tingkat keparahan, dan status perbaikan.                        |
+| **Rekomendasi**       | Saran peningkatan performa, keamanan, dan stabilitas sistem.                     |
+| **Analitik & Grafik** | Tren hasil pengujian seperti jumlah bug dan keberhasilan test case dari waktu ke waktu. |
 
-  -----------------------------------------------------------------------
-  Komponen                     Isi Pelaporan
-  ---------------------------- ------------------------------------------
-  **Ringkasan Hasil**          Jumlah test case yang berhasil, gagal, dan
-                               belum dijalankan.
-
-  **Evaluasi Kualitas**        Apakah sistem memenuhi spesifikasi
-                               fungsional dan non-fungsional.
-
-  **Identifikasi Bug**         Jenis kesalahan, tingkat keparahan, dan
-                               status perbaikan.
-
-  **Rekomendasi**              Saran peningkatan performa, keamanan, dan
-                               stabilitas.
-
-  **Analitik & Grafik**        Tren jumlah bug, peningkatan hasil
-                               pengujian dari waktu ke waktu.
-  -----------------------------------------------------------------------
-
-------------------------------------------------------------------------
+---
 
 ## 8. Kesimpulan
+Testing merupakan **tahapan krusial dalam SDLC (Software Development Life Cycle)** karena berfungsi memastikan **kualitas, keamanan, dan keandalan software** sebelum dirilis kepada pengguna.  
+Dengan testing yang baik, tim pengembang dapat:
 
-Testing merupakan **tahap penting dalam SDLC (Software Development Life
-Cycle)** yang tidak hanya mencari kesalahan, tetapi juga menjamin
-**kualitas dan keandalan sistem** sebelum dirilis ke pengguna.\
-Dengan penerapan testing yang baik, pengembang dapat:
+- Mengurangi risiko dan biaya perbaikan di tahap akhir,  
+- Menjamin performa & keamanan sistem,  
+- Meningkatkan kepuasan dan kepercayaan pengguna.
 
--   Menghindari biaya besar akibat bug di tahap akhir\
--   Menjamin performa dan keamanan aplikasi\
--   Meningkatkan kepuasan pengguna dan reputasi sistem
+| **Aspek Utama**        | **Dampak**                                                |
+|-------------------------|-----------------------------------------------------------|
+| **Kualitas Produk**     | Software lebih stabil, aman, dan bebas bug.              |
+| **Kepercayaan Pengguna**| Meningkatkan kepuasan dan loyalitas pengguna.           |
+| **Efisiensi Proyek**    | Waktu perbaikan berkurang dan biaya lebih terkendali.   |
 
-  -----------------------------------------------------------------------
-  Aspek Utama                                   Dampak
-  --------------------------------------------- -------------------------
-  **Kualitas Produk**                           Software lebih stabil,
-                                                aman, dan bebas bug.
-
-  **Kepercayaan Pengguna**                      Peningkatan kepuasan dan
-                                                loyalitas pengguna.
-
-  **Efisiensi Proyek**                          Waktu perbaikan
-                                                berkurang, biaya lebih
-                                                terkendali.
-  -----------------------------------------------------------------------
+---
